@@ -1,0 +1,6 @@
+@PortfolioNetAuthService.API_HostAddress = http://localhost:5248
+
+GET {{PortfolioNetAuthService.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
