@@ -4,7 +4,7 @@
     {
         public bool Success { get; set; }
         public string Token { get; set; } = string.Empty;
-        public List<string> Errors { get; set; } = new();
+        public List<string> Errors { get; set; } = [];
 
         public static AuthResult Fail(params string[] errors)
         {
