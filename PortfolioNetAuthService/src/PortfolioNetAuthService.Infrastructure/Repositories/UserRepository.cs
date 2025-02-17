@@ -5,14 +5,9 @@ using PortfolioNetAuthService.Infrastructure.Data;
 
 namespace PortfolioNetAuthService.Infrastructure.Repositories;
 
-public class UserRepository : IUserRepository
+public class UserRepository(DataContext context) : IUserRepository
 {
-    private readonly DataContext _context;
-
-    public UserRepository(DataContext context)
-    {
-        _context = context;
-    }
+    private readonly DataContext _context = context;
 
     public async Task<User?> GetUserByUsernameAsync(string username)
     {
