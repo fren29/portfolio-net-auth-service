@@ -19,10 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PortfolioNetAuthService.API\PortfolioNetAuthService.API.csproj" />
-    <ProjectReference Include="..\PortfolioNetAuthService.Application\PortfolioNetAuthService.Application.csproj" />
-    <ProjectReference Include="..\PortfolioNetAuthService.Infrastructure\PortfolioNetAuthService.Infrastructure.csproj" />
-    <ProjectReference Include="..\PortfolioNetAuthService.Domain\PortfolioNetAuthService.Domain.csproj" />
     <ProjectReference Include="..\..\src\PortfolioNetAuthService.API\PortfolioNetAuthService.API.csproj" />
     <ProjectReference Include="..\..\src\PortfolioNetAuthService.Application\PortfolioNetAuthService.Application.csproj" />
     <ProjectReference Include="..\..\src\PortfolioNetAuthService.Infrastructure\PortfolioNetAuthService.Infrastructure.csproj" />
