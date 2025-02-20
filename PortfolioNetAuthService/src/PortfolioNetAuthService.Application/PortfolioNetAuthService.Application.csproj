@@ -1,13 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="14.0.0" />
+    <PackageReference Include="MediatR" Version="12.4.1" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.2" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.5.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\PortfolioNetAuthService.Domain\PortfolioNetAuthService.Domain.csproj" />
-    <ProjectReference Include="..\PortfolioNetAuthService.Infrastructure\PortfolioNetAuthService.Infrastructure.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

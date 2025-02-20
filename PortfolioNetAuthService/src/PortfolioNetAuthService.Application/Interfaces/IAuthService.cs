@@ -1,10 +1,11 @@
+using PortfolioNetAuthService.Application.DTOs;
 using PortfolioNetAuthService.Domain.Entities;
 
 namespace PortfolioNetAuthService.Application.Interfaces
 {
     public interface IAuthService
     {
-        Task<string> RegisterAsync(User user, string password);
-        Task<string> LoginAsync(string username, string password);
+        Task<AuthResult> RegisterAsync(RegisterDto registerDto);
+        Task<AuthResult> LoginAsync(LoginDto loginDto);
     }
 }

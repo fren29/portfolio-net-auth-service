@@ -2,11 +2,11 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.2" />
-    <PackageReference Include="Npgsql" Version="9.0.2" />
-    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.2" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PortfolioNetAuthService.Application\PortfolioNetAuthService.Application.csproj" />
     <ProjectReference Include="..\PortfolioNetAuthService.Domain\PortfolioNetAuthService.Domain.csproj" />
   </ItemGroup>
 

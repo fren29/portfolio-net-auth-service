@@ -3,25 +3,26 @@ using PortfolioNetAuthService.Domain.Entities;
 using PortfolioNetAuthService.Domain.Interfaces;
 using PortfolioNetAuthService.Infrastructure.Data;
 
-namespace PortfolioNetAuthService.Infrastructure.Repositories;
-
-public class UserRepository(DataContext context) : IUserRepository
+namespace PortfolioNetAuthService.Infrastructure.Repositories
 {
-    private readonly DataContext _context = context;
-
-    public async Task<User?> GetUserByUsernameAsync(string username)
+    public class UserRepository(DataContext context) : IUserRepository
     {
-        return await _context.Users.FirstOrDefaultAsync(u => u.Username == username);
-    }
+        private readonly DataContext _context = context;
 
-    public async Task<User?> GetUserByEmailAsync(string email)
-    {
-        return await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
-    }
+        public async Task<User?> GetUserByUsernameAsync(string username)
+        {
+            return await _context.Users.FirstOrDefaultAsync(u => u.Username == username);
+        }
 
-    public async Task CreateUserAsync(User user)
-    {
-        _context.Users.Add(user);
-        await _context.SaveChangesAsync();
+        public async Task<User?> GetUserByEmailAsync(string email)
+        {
+            return await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+        }
+
+        public async Task CreateUserAsync(User user)
+        {
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
+        }
     }
 }
